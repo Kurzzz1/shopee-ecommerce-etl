@@ -37,3 +37,6 @@ Calculating New Metrics
 * Original Price Calculation: Used the final price and the discount percentage to reverse-calculate the approximate original price of the headphones.
 * Grouping: Grouped the highly varied discount rates and shop offers into clear, simple categories (like grouping offers into Flash Sale or Cashback).
 
+## Business Value ## 
+This project demonstrates the ability to transform messy, real-world web-scraped data into a structured and analysis-ready dataset. Through data cleaning, text parsing, and feature engineering, the resulting dataset becomes suitable for downstream applications such as dashboards, exploratory analysis, and statistical models for studying pricing strategies and competitive market behavior.
+
