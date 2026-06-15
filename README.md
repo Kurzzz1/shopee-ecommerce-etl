@@ -1,6 +1,6 @@
 This project demonstrates how I used Power Query to transform raw, web-scraped product data from Shopee into a structured and analysis-ready dataset.
 
-Web-scraped data is usually noisy and inconsistent, so I built a systematic cleaning and transformation process to standardize text fields, structure location data, and engineer pricing-related metrics. This allowed the dataset to become suitable for identifying patterns in pricing, promotions, and market behavior.
+I developed a systematic cleaning and transformation procedure to standardize text fields, organize location data, and generate pricing-related indicators because web-scraped data is typically noisy and inconsistent. This made it possible to use the dataset to find trends in market behavior, pricing, and promotions.
 
 ## Project Structure ## 
 The project is organized around a simple ETL workflow implemented in Power Query (M Language). The Excel file contains both raw and processed datasets, along with the transformation logic used to build the final output.
