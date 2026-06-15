@@ -5,32 +5,32 @@ Web-scraped data is usually noisy and inconsistent, so I built a systematic clea
 ## Project Structure ## 
 The project is organized around a simple ETL workflow implemented in Power Query (M Language). The Excel file contains both raw and processed datasets, along with the transformation logic used to build the final output.
 
-* Scrape Sheet
+1. Scrape Sheet
  - Contains the raw, unprocessed web-scraped dataset exactly as extracted from Shopee listings, including noisy text fields and inconsistent formatting.
-* ETL Sheet
+2. ETL Sheet
 - The cleaned and transformed dataset generated through Power Query, containing structured and analysis-ready features.
-* transformation_script.pq
+3. transformation_script.pq
 - The full M-code pipeline documenting each step of the data cleaning, transformation, and feature engineering process.
 
 ## Data Engineering (ETL) Workflow ## 
 
-* Data Cleaning & Standardization
+Data Cleaning & Standardization
 Raw scraped data was cleaned and normalized to ensure consistency and analytical usability.
  - Converted unstructured text fields (e.g., "1.2k sold") into numeric values (e.g., 1,200)
  - Handled missing, blank, and inconsistent values in pricing and delivery-related fields
  - Standardized column formats for downstream analysis
 
-* Organizing the Details
-Transformed unstructured text fields into structured analytical variables.
+Organizing the Details
+* Transformed unstructured text fields into structured analytical variables.
 
-- Parsed raw location strings into:
+Parsed raw location strings into:
  * City
  * Region
  * Country
   
-- Converted delivery time ranges (e.g., "7–30 Days") into numeric features:
+Converted delivery time ranges (e.g., "7–30 Days") into numeric features:
  * Minimum Delivery Period
  * Maximum Delivery Period
 
-* Calculating New Metrics
+Calculating New Metrics
 
