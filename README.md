@@ -15,13 +15,14 @@ The project is organized around a simple ETL workflow implemented in Power Query
 ## Data Engineering (ETL) Workflow ## 
 
 Data Cleaning & Standardization
+
 Raw scraped data was cleaned and normalized to ensure consistency and analytical usability.
- - Converted unstructured text fields (e.g., "1.2k sold") into numeric values (e.g., 1,200)
- - Handled missing, blank, and inconsistent values in pricing and delivery-related fields
- - Standardized column formats for downstream analysis
+ * Converted unstructured text fields (e.g., "1.2k sold") into numeric values (e.g., 1,200)
+ * Handled missing, blank, and inconsistent values in pricing and delivery-related fields
+ * Standardized column formats for downstream analysis
 
 Organizing the Details
-* Transformed unstructured text fields into structured analytical variables.
+ * Transformed unstructured text fields into structured analytical variables.
 
 Parsed raw location strings into:
  * City
@@ -33,4 +34,6 @@ Converted delivery time ranges (e.g., "7–30 Days") into numeric features:
  * Maximum Delivery Period
 
 Calculating New Metrics
+* Original Price Calculation: Used the final price and the discount percentage to reverse-calculate the approximate original price of the headphones.
+* Grouping: Grouped the highly varied discount rates and shop offers into clear, simple categories (like grouping offers into Flash Sale or Cashback).
 
