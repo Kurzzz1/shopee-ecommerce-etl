@@ -1,1 +1,36 @@
-# shopee-ecommerce-etl
+This project demonstrates how I used Power Query to transform raw, web-scraped product data from Shopee into a structured and analysis-ready dataset.
+
+Web-scraped data is usually noisy and inconsistent, so I built a systematic cleaning and transformation process to standardize text fields, structure location data, and engineer pricing-related metrics. This allowed the dataset to become suitable for identifying patterns in pricing, promotions, and market behavior.
+
+## Project Structure ## 
+The project is organized around a simple ETL workflow implemented in Power Query (M Language). The Excel file contains both raw and processed datasets, along with the transformation logic used to build the final output.
+
+* Scrape Sheet
+ - Contains the raw, unprocessed web-scraped dataset exactly as extracted from Shopee listings, including noisy text fields and inconsistent formatting.
+* ETL Sheet
+- The cleaned and transformed dataset generated through Power Query, containing structured and analysis-ready features.
+* transformation_script.pq
+- The full M-code pipeline documenting each step of the data cleaning, transformation, and feature engineering process.
+
+## Data Engineering (ETL) Workflow ## 
+
+* Data Cleaning & Standardization
+Raw scraped data was cleaned and normalized to ensure consistency and analytical usability.
+ - Converted unstructured text fields (e.g., "1.2k sold") into numeric values (e.g., 1,200)
+ - Handled missing, blank, and inconsistent values in pricing and delivery-related fields
+ - Standardized column formats for downstream analysis
+
+* Organizing the Details
+Transformed unstructured text fields into structured analytical variables.
+
+- Parsed raw location strings into:
+ * City
+ * Region
+ * Country
+  
+- Converted delivery time ranges (e.g., "7–30 Days") into numeric features:
+ * Minimum Delivery Period
+ * Maximum Delivery Period
+
+* Calculating New Metrics
+
